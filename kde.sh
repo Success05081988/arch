@@ -20,8 +20,8 @@ makepkg -si --noconfirm
 #sudo systemctl enable --now auto-cpufreq
 
 
-sudo pacman -S --noconfirm plasma-meta ark dolphin konsole kwrite sddm xorg-server xorg-xinit xorg-xkill vlc yakuake
-
+sudo pacman -S --noconfirm plasma-meta ark dolphin konsole kwrite sddm sddm-kcm xorg-server xorg-xinit xorg-xkill vlc yakuake neofetch chromium
+sudo pacman -S --noconfirm ttf-roboto ttf-roboto-mono ttf-roboto-mono-nerd ttf-terminus-nerd ksysguard 
 #sudo flatpak install -y spotify
 
 sudo systemctl enable sddm
