@@ -2,6 +2,8 @@
 
 ln -sf /usr/share/zoneinfo/Asia/Tashkent /etc/localtime
 hwclock --systohc
+reflector --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+pacman -Syy
 sed -i '398s/.//' /etc/locale.gen
 locale-gen
 echo "LANG=ru_RU.UTF-8" >> /etc/locale.conf
@@ -12,9 +14,7 @@ echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
 echo root:password | chpasswd
-pacman -S --noconfirm reflector
-pacman -Syy
-reflector --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+
 # You can add xorg to the installation packages, I usually add it at the DE or WM install script
 # You can remove the tlp package if you are installing on a desktop or vm
 
@@ -40,6 +40,7 @@ systemctl enable acpid
 
 useradd -mG wheel orif
 echo orif:password | chpasswd
+sed -i '85s/.//' EDITOR=nano visudo
 #usermod -aG libvirt ermanno
 
 #echo "orif ALL=(ALL) ALL" >> /etc/sudoers.d/orif
