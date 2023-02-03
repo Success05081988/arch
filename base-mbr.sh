@@ -40,10 +40,9 @@ systemctl enable acpid
 
 useradd -mG wheel orif
 echo orif:password | chpasswd
-sed -i '85s/.//' EDITOR=nano visudo
 #usermod -aG libvirt ermanno
 
-#echo "orif ALL=(ALL) ALL" >> /etc/sudoers.d/orif
+echo "orif ALL=(ALL) ALL" >> /etc/sudoers.d/orif
 
 
 printf "\e[1;32mDone! Type exit, umount -a and reboot.\e[0m"
