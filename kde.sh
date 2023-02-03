@@ -9,9 +9,11 @@ sudo hwclock --systohc
 #sudo firewall-cmd --add-port=1025-65535/udp --permanent
 #sudo firewall-cmd --reload
 
+cd /home/orif
 git clone https://aur.archlinux.org/yay.git
-cd /arch/yay/
+cd /home/orif/yay/
 makepkg -si --noconfirm
+
 
 #pikaur -S --noconfirm system76-power
 #sudo systemctl enable --now system76-power
