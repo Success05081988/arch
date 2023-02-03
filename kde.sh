@@ -10,7 +10,7 @@ sudo hwclock --systohc
 #sudo firewall-cmd --reload
 
 git clone https://aur.archlinux.org/yay.git
-cd yay/
+cd /arch/yay/
 makepkg -si --noconfirm
 
 #pikaur -S --noconfirm system76-power
