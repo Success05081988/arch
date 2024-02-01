@@ -20,7 +20,11 @@ pacman -S --noconfirm grub efibootmgr networkmanager network-manager-applet dial
 
 sleep 10
 
-pacman -S --noconfirm grub-btrfs xorg plasma konsole dolphin
+pacman -S --noconfirm grub-btrfs
+
+sleep 10
+
+pacman -S --noconfirm xorg plasma konsole dolphin
 #pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
 
 sleep 10
