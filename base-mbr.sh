@@ -39,7 +39,7 @@ echo "test ALL=(ALL) ALL" >> /etc/sudoers.d/test
 usermod -c 'Orif Ismailov' test
 
 
-printf "\e[1;32mDone! Type exit, umount -R /mnt and reboot.\e[0m"
+printf "\e[1;32mDone! Type exit, umount -a /mnt and reboot.\e[0m"
 
 
 
