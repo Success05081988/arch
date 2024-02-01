@@ -14,7 +14,7 @@ echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
 echo root:password | chpasswd
 
-pacman -S --noconfirm grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools reflector base-devel linux-lts-headers linux-headers bluez bluez-utils cups hplip bash-completion openssh rsync acpi acpi_call acpi_call-lts sof-firmware acpid os-prober ntfs-3g terminus-font ttf-teminus-nerd ttf-roboto alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack man fwupd
+pacman -S --noconfirm grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools reflector base-devel linux-lts-headers linux-headers bluez bluez-utils cups hplip alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack bash-completion openssh rsync acpi acpi_call acpi_call-lts sof-firmware acpid os-prober ntfs-3g terminus-font ttf-terminus-nerd ttf-roboto man fwupd
 
 pacman -S --noconfirm grub-btrfs xorg plasma
 # pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
