@@ -20,7 +20,7 @@ pacman -S --noconfirm grub efibootmgr networkmanager network-manager-applet dial
 
 sleep 10
 
-pacman -S --noconfirm grub-btrfs xorg plasma
+pacman -S --noconfirm grub-btrfs xorg plasma konsole dolphin
 #pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
 
 sleep 10
@@ -48,7 +48,7 @@ echo test:password | 123
 echo "test ALL=(ALL) ALL" >> /etc/sudoers.d/test
 usermod -c 'Orif Ismailov' test
 
-sleep 5
+sleep 10
 
 printf "\e[1;32mDone! Type exit, umount -a /mnt and reboot.\e[0m"
 
