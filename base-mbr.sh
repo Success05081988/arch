@@ -18,7 +18,7 @@ echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
 sleep 5
 echo root:password | chpasswd
 
-pacman -S --noconfirm grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools reflector base-devel linux-zen-headers bluez bluez-utils cups hplip alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack bash-completion openssh rsync acpi tlp sof-firmware acpid ntfs-3g terminus-font ttf-terminus-nerd ttf-roboto man fwupd
+pacman -S --noconfirm grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools reflector base-devel linux-zen-headers bluez bluez-utils cups hplip alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack bash-completion openssh rsync acpi tlp sof-firmware acpid ntfs-3g terminus-font ttf-terminus-nerd ttf-roboto man fwupd git
 
 sleep 5
 
