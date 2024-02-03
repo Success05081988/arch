@@ -1,4 +1,5 @@
 #!/bin/bash
+print "НАЧИНАЕТСЯ УСТАНОВКА ARCH-LINUX"
 
 pacman -Syy
 ln -sf /usr/share/zoneinfo/Asia/Tashkent /etc/localtime
@@ -16,28 +17,31 @@ echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
 sleep 5
 echo root:password | chpasswd
 
-pacman -S --noconfirm grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools reflector base-devel linux-zen-headers alsa-utils jack2 bash-completion openssh rsync acpi sof-firmware acpid ntfs-3g terminus-font ttf-terminus-nerd ttf-roboto man fwupd
+pacman -S --noconfirm grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools reflector base-devel linux-zen-headers bluez bluez-utils cups hplip alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack bash-completion openssh rsync acpi tlp sof-firmware acpid ntfs-3g terminus-font ttf-terminus-nerd ttf-roboto man fwupd
 
-sleep 10
+sleep 5
 
 pacman -S --noconfirm grub-btrfs
 
-sleep 10
+sleep 5
 
 pacman -S --noconfirm xorg
 
+sleep 5
+
+pacman -S --noconfirm plasma 
+
 sleep 10
 
-pacman -S --noconfirm plasma egl-wayland konsole dolphin
-#pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
+pacman -S --noconfirm egl-wayland konsole dolphin plasma-wayland-session neofetch htop inxi bpytop elisa vlc chromium okular gwenview obs-studio
 
-sleep 10
+sleep 5
 
-grub-install --target=i386-pc /dev/sda
+grub-install --target=i386-pc /dev/sdb
 #grub-install --target=i386-pc /dev/sda # replace sdx with your disk name, not the partition
 grub-mkconfig -o /boot/grub/grub.cfg
 
-sleep 10
+sleep 5
 
 systemctl enable NetworkManager
 #systemctl enable bluetooth
@@ -51,12 +55,17 @@ systemctl enable acpid
 
 sleep 5
 
-useradd -m orif1988
+useradd -m test
 echo test:password | chpasswd
-echo "orif1988 ALL=(ALL) ALL" >> /etc/sudoers.d/orif1988
-usermod -c 'Orif Ismailov' orif1988
+echo "test ALL=(ALL) ALL" >> /etc/sudoers.d/test
+usermod -c 'Orif Ismailov' test
 
-sleep 10
+cd /home/test/Загрузки
+git clone https://aur.archlinux.org/yay-bin
+cd /yay-bin
+--noconfirm makepkg -si
+
+sleep 5
 
 printf "\e[1;32mDone! Type exit, umount -a /mnt and reboot.\e[0m"
 
