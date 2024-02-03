@@ -51,15 +51,15 @@ systemctl enable acpid
 
 sleep 5
 
-useradd -m test
-echo test:password | chpasswd
-echo "test ALL=(ALL) ALL" >> /etc/sudoers.d/test
-usermod -c 'Orif Ismailov' test
+useradd -m orif1988
+echo orif1988:password | chpasswd 123
+echo "orif1988 ALL=(ALL) ALL" >> /etc/sudoers.d/orif1988
+usermod -c 'Orif Ismailov' orif1988
 
-cd /home/test
+cd /home/orif1988
 git clone https://aur.archlinux.org/yay-bin
 cd /yay-bin
-makepkg -si
+makepkg -si --noconfirm
 
 sleep 5
 
