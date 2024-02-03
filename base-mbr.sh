@@ -1,5 +1,6 @@
 #!/bin/bash
-print "НАЧИНАЕТСЯ УСТАНОВКА ARCH-LINUX"
+echo "НАЧИНАЕТСЯ УСТАНОВКА ARCH-LINUX"
+sleep 5
 
 pacman -Syy
 ln -sf /usr/share/zoneinfo/Asia/Tashkent /etc/localtime
