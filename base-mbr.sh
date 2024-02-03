@@ -14,7 +14,7 @@ echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
 sleep 5
-echo root:password | chapasswd
+echo root:password | chpasswd
 
 pacman -S --noconfirm grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools reflector base-devel linux-zen-headers alsa-utils jack2 bash-completion openssh rsync acpi sof-firmware acpid ntfs-3g terminus-font ttf-terminus-nerd ttf-roboto man fwupd
 
@@ -52,7 +52,7 @@ systemctl enable acpid
 sleep 5
 
 useradd -m orif1988
-echo test:password | chapsswd
+echo test:password | chpasswd
 echo "orif1988 ALL=(ALL) ALL" >> /etc/sudoers.d/orif1988
 usermod -c 'Orif Ismailov' orif1988
 
