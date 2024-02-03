@@ -1,7 +1,6 @@
 #!/bin/bash
-echo "НАЧИНАЕТСЯ УСТАНОВКА ARCH-LINUX"
+echo "<<------ START INSTALL ARCH-LINUX ------>>"
 sleep 5
-
 pacman -Syy
 ln -sf /usr/share/zoneinfo/Asia/Tashkent /etc/localtime
 hwclock --systohc
@@ -16,17 +15,13 @@ echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
 sleep 5
-echo root:password | chpasswd
+echo root:password | chpasswd 3319861
 
-pacman -S --noconfirm grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools reflector base-devel linux-zen-headers bluez bluez-utils cups hplip alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack bash-completion openssh rsync acpi tlp sof-firmware acpid ntfs-3g terminus-font ttf-terminus-nerd ttf-roboto man fwupd git
-
-sleep 5
-
-pacman -S --noconfirm grub-btrfs
+pacman -S --noconfirm base-devel linux-zen-headers sof-firmware grub alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools reflector bluez bluez-utils cups hplip bash-completion openssh rsync acpi tlp acpid ntfs-3g terminus-font ttf-terminus-nerd ttf-roboto man fwupd git
 
 sleep 5
 
-pacman -S --noconfirm xorg
+pacman -S --noconfirm xorg grub-btrfs
 
 sleep 5
 
@@ -61,10 +56,10 @@ echo test:password | chpasswd
 echo "test ALL=(ALL) ALL" >> /etc/sudoers.d/test
 usermod -c 'Orif Ismailov' test
 
-cd /home/test/Загрузки
+cd /home/test
 git clone https://aur.archlinux.org/yay-bin
 cd /yay-bin
---noconfirm makepkg -si
+makepkg -si
 
 sleep 5
 
