@@ -15,7 +15,7 @@ echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
 sleep 5
-echo root:password | chpasswd 3319861
+echo root:password | chpasswd
 
 pacman -S --noconfirm base-devel linux-zen-headers sof-firmware grub alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools reflector bluez bluez-utils cups hplip bash-completion openssh rsync acpi tlp acpid ntfs-3g terminus-font ttf-terminus-nerd ttf-roboto man fwupd git
 
@@ -51,15 +51,10 @@ systemctl enable acpid
 
 sleep 5
 
-useradd -m orif1988
-echo orif1988:password | chpasswd 123
-echo "orif1988 ALL=(ALL) ALL" >> /etc/sudoers.d/orif1988
-usermod -c 'Orif Ismailov' orif1988
-
-cd /home/orif1988
-git clone https://aur.archlinux.org/yay-bin
-cd /yay-bin
-makepkg -si --noconfirm
+useradd -m test
+echo test:password | chpasswd
+echo "test ALL=(ALL) ALL" >> /etc/sudoers.d/test
+usermod -c 'Orif Ismailov' test
 
 sleep 5
 
