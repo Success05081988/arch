@@ -33,7 +33,7 @@ pacman -S --noconfirm egl-wayland konsole dolphin plasma-wayland-session neofetc
 
 sleep 5
 
-grub-install --target=i386-pc /dev/sdd
+grub-install --target=i386-pc /dev/sdc
 #grub-install --target=i386-pc /dev/sda # replace sdx with your disk name, not the partition
 grub-mkconfig -o /boot/grub/grub.cfg
 
