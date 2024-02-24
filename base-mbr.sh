@@ -4,7 +4,7 @@ sleep 3
 pacman -Syy
 ln -sf /usr/share/zoneinfo/Asia/Tashkent /etc/localtime
 hwclock --systohc
-sed -i '400s/.//' /etc/locale.gen
+sed -i '398s/.//' /etc/locale.gen
 locale-gen
 sleep 3
 echo "LANG=ru_RU.UTF-8" >> /etc/locale.conf
