@@ -18,7 +18,7 @@ echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
 sleep 5
 echo root:password | chpasswd
 
-pacman -S --noconfirm linux-lts-headers sof-firmware grub alsa-utils alsa alsa-tools alsa-oss \ 
+pacman -S --noconfirm linux-lts-headers sof-firmware grub alsa-utils alsa-tools alsa-oss \ 
 alsa-firmware alsa-card-profiles alsa-plugins efibootmgr networkmanager \
 network-manager-applet dialog wpa_supplicant mtools dosfstools \
 bash-completion openssh rsync acpi acpi_call-lts \
